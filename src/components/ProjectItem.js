@@ -7,9 +7,12 @@ function ProjectItem({ name, about, technologies }) {
       <p>{about}</p>
       <div className="technologies">
         {/* render a <span> for each technology in the technologies array */}
+        {technologies && technologies.map((technology, index) => (
+          <span key={index}>{technology}</span>
+        ))}
       </div>
     </div>
   );
 }
 
-export default ProjectItem;
+export default ProjectItem
